@@ -1,0 +1,14 @@
+{% extends 'gestionCursos.html' %}
+
+{% load static %}
+
+{% block titulo %}ESTE ES EL CONTENIDO DE LAS MATERIAS{% endblock titulo %}
+
+{% block contenido_que_cambia %}
+<h1>CURSOS</h1>
+<ul>
+    {% for curso in cursos %}
+        <li>{{ curso.nombre}} -{{ curso.creditos}}</li>
+    {% endfor %}
+</ul>
+{% endblock contenido_que_cambia %}

@@ -1,0 +1,24 @@
+{% extends 'gestionCursos.html' %}
+
+ {% load static %}
+
+ {% block titulo %}ESTE ES EL RESULTADO DE BUSQUEDA POR CREDITOS{% endblock titulo %}
+
+ {% block contenido_que_cambia %}
+
+ {% if cursos %}
+
+      <h1>RESULTADOS DE BUSQUEDA</h1>
+      {% for curso in cursos %}
+
+       <h3>{{ curso.nombre }} - {{ curso.creditos }}</h3>
+      {% endfor %}
+
+
+{% else %}   
+
+    <h1>NO SE ENCONTRARON RESULTADOS</h1>
+
+{% endif %}
+
+{% endblock contenido_que_cambia %}

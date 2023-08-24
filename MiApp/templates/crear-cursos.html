@@ -1,0 +1,17 @@
+{% extends 'gestionCursos.html' %}
+
+ {% load static %}
+
+ {% block titulo %}ESTE ES UN FORMULARIO DE CARGA DE CURSOS {% endblock titulo %}
+
+ {% block contenido_que_cambia %}
+   <h2>FORMULARIO</h2>
+   <form action="{% url 'cursos' %}"   method="POST"> {% csrf_token %}
+
+      {{ formulario.as_p }}
+
+    <input type = "submit" value="GUARDAR MATERIA">
+ </form> 
+ 
+    <h3>{{ mensaje }}</h3>
+ {% endblock contenido_que_cambia %}

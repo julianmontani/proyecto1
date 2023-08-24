@@ -1,0 +1,18 @@
+{% extends 'gestionCursos.html' %}
+
+{% load static %}
+
+{% block titulo %}BIENVENIDOS A MERCUNIVERSITY{% endblock titulo %}
+
+{% block contenido_que_cambia %}
+  <h1>ESTE ES EL CONTENIDO DE LOS DIRECTIVOS</h1>
+  <ul>
+    {% for directivo in directivos %}
+      <li>
+        <h2>{{ directivo.nombre }} {{ directivo.apellido }}</h2>
+        <p>Email: {{ directivo.email }}</p>
+        <p>Profesión: {{ directivo.profesion }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock contenido_que_cambia %}

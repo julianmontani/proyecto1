@@ -1,0 +1,19 @@
+{% extends 'gestionCursos.html' %}
+
+ {% load static %}
+
+ {% block titulo %}ESTA ES LA BUSQUEDA DE CURSOS{% endblock titulo %}
+
+ {% block contenido_que_cambia %}
+ <form action="{% url 'buscar' %}" method="get">
+    <input type="text" name="nombre" id="nombre" placeholder="INSERTE NOMBRE">
+    
+    <input type="submit" value="buscar cursos">
+ </form>
+ <h2>{{ mensaje }}</h2>
+   
+ {% endblock contenido_que_cambia %}
+
+ {% block botonprofes %}
+ 'btn btn-danger'
+ {% endblock %}
